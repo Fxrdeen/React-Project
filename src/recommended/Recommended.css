@@ -1,0 +1,21 @@
+.recommended-flex {
+    display: flex;
+    margin-left: 20rem;
+  }
+  
+  .recommended-title {
+    margin-left: 20rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  @media (max-width:400px) {
+   .recommended-flex{
+    flex-direction: column;
+    margin-left: 10rem;
+   } 
+   .recommended-title{
+    margin-left: 10rem;
+   }
+  }
