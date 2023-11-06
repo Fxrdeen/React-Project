@@ -1,6 +1,7 @@
 import Nav from "./Navigation/Nav";
 import Products from "./products/Products";
 import Recommended from "./recommended/Recommended";
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Register from "./register/Register";
 import {Route, Routes} from 'react-router-dom'
 import Sidebar from "./sidebar/Sidebar";
