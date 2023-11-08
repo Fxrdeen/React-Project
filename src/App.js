@@ -8,6 +8,7 @@ import Sidebar from "./sidebar/Sidebar";
 import {useState} from 'react';
 import products from "./db/data";
 import Card from './components/Card'
+import { OneProduct } from "./ProductDetail/OneProduct";
 import './index.css'
 
 function App() {
@@ -33,7 +34,6 @@ function App() {
   const handleClick = (event) => {
     setSelectedCategory(event.target.value);
   };
-
   function filteredData(products, selected, query) {
     let filteredProducts = products;
 
@@ -55,9 +55,10 @@ function App() {
     }
 
     return filteredProducts.map(
-      ({ img, title, star, reviews, prevPrice, newPrice }) => (
+      ({id, img, title, star, reviews, prevPrice, newPrice }) => (
         <Card
-          key={Math.random()}
+          id = {id}
+          key={id}
           img={img}
           title={title}
           star={star}
@@ -85,6 +86,12 @@ function App() {
       }
       />
       <Route path="/register" element={<Register/>}/>
+      <Route path="/product/:id" element={
+        <>
+          <Nav query={query} handleInputChange={handleInputChange} />
+          <OneProduct/>
+        </>
+        } />
     </Routes>
     </>
     );

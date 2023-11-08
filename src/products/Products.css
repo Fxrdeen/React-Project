@@ -28,6 +28,23 @@
     color: #d5ab55;
 }
 
+.buy{
+    height: 25%;
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    color: blue;
+    margin-top: 5%;
+    box-shadow: 2px;
+    transition: background-color 0.3s ease-in-out;
+}
+.buy:hover {
+    color: black;
+    border-radius: 20px; 
+    background-color: lightyellow;
+    transition: 0.3s ease-in-out;
+}
+
 .total-reviews{
     font-size: 0.9rem;
     margin-left: 10px;

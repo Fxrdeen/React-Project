@@ -1,6 +1,6 @@
 import { BsFillBagFill } from "react-icons/bs";
-
-const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
+import { Link } from "react-router-dom";
+const Card = ({id, img, title, star, reviews, prevPrice, newPrice }) => {
   return (
     <>
       <section className="card">
@@ -19,6 +19,7 @@ const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
               <BsFillBagFill className="bag-icon" />
             </div>
           </section>
+          <Link to={`/product/${id}`}><button className="buy">Buy Now</button></Link>
         </div>
       </section>
     </>
