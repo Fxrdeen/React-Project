@@ -20,7 +20,7 @@ export const OneProduct = () => {
           prevPrice={selectedObj.prevPrice}
           newPrice={selectedObj.newPrice}
         />
-        <h1>Hello World</h1>
+        <h1>Deployed this lol</h1>
     </div>
   )
 }
