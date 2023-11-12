@@ -100,7 +100,6 @@ const data = [
     color: "green",
     category: "sneakers",
   },
-
   
 ];
 

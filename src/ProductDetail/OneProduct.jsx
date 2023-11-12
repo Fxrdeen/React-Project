@@ -1,7 +1,8 @@
 import React from 'react'
 import data from '../db/data'
 import { useParams } from 'react-router-dom'
-import Card from '../components/Card'
+import AnotherCard from '../components/AnotherCard'
+import './OneProduct.css'
 export const OneProduct = () => {
     const {id} = useParams();
     const objId = parseInt(id, 10);
@@ -9,7 +10,7 @@ export const OneProduct = () => {
     return (
     <div>
         <h1>Product: {objId}</h1>
-        <Card
+        <AnotherCard
           id = {selectedObj.id}
           key={selectedObj.id}
           img={selectedObj.img}
