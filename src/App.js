@@ -5,18 +5,32 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Register from "./register/Register";
 import {Route, Routes} from 'react-router-dom'
 import Sidebar from "./sidebar/Sidebar";
-import {useState} from 'react';
-import products from "./db/data";
+import {useState, useEffect} from 'react';
+import prod from "./db/data";
 import Card from './components/Card'
+import axios from "axios";
 import { OneProduct } from "./ProductDetail/OneProduct";
 import './index.css'
-
+import Navbarhi from "./components/Navbar"; 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
-
-  // ----------- Input Filter -----------
+  const [products,setProducts] = useState(prod);
   const [query, setQuery] = useState("");
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5001/api/products');
+        const mongodbData = response.data;
+        // Combine MongoDB data with the existing products array
+        setProducts((prevProducts) => [...prevProducts, ...mongodbData]);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
@@ -58,7 +72,6 @@ function App() {
       ({id, img, title, star, reviews, prevPrice, newPrice }) => (
         <Card
           id = {id}
-          key={id}
           img={img}
           title={title}
           star={star}
@@ -77,7 +90,11 @@ function App() {
     <> 
     <Routes>
       <Route path="/" element={
+        <Navbarhi/>
+      } />
+      <Route path="/product" element={
         <>
+        <Navbarhi/>
         <Sidebar handleChange={handleChange} />
         <Nav query={query} handleInputChange={handleInputChange} />
         <Recommended handleClick={handleClick} />

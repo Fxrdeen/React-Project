@@ -9,9 +9,9 @@ const data = [
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Nike",
+    company: "Tablet",
     color: "white",
-    category: "sneakers",
+    category: "Tablet",
   },
   {
     id:2,
@@ -21,9 +21,9 @@ const data = [
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Nike",
+    company: "Tablet",
     color: "red",
-    category: "sneakers",
+    category: "Tablet",
   },
 
   {
@@ -34,9 +34,9 @@ const data = [
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Nike",
+    company: "Laptop",
     color: "green",
-    category: "sneakers",
+    category: "Laptop",
   },
   {
     id:4,
@@ -46,9 +46,9 @@ const data = [
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Adidas",
+    company: "Mobile",
     color: "black",
-    category: "sneakers",
+    category: "Mobile",
   },
   {
     id:5,
@@ -58,9 +58,9 @@ const data = [
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Vans",
+    company: "Mobile",
     color: "green",
-    category: "flats",
+    category: "Mobile",
   },
   {
     id:6,
@@ -70,9 +70,9 @@ const data = [
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
-    company: "Adidas",
+    company: "Mobile",
     color: "black",
-    category: "flats",
+    category: "Mobile",
   },
 
   {
@@ -83,11 +83,10 @@ const data = [
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
-    company: "Vans",
+    company: "Mobile",
     color: "white",
-    category: "flats",
+    category: "Mobile",
   },
-
   {
     id:8,
     img: "https://m.media-amazon.com/images/I/71RxCmvnrbL._AC_UY218_.jpg",
@@ -96,11 +95,15 @@ const data = [
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
-    company: "Nike",
+    company: "Television",
     color: "green",
-    category: "sneakers",
+    category: "Television",
   },
   
 ];
+
+export const addProduct = (product) => {
+  data.push(product);
+}
 
 export default data;

@@ -1,6 +1,6 @@
 import { BsFillBagFill } from "react-icons/bs";
 import styles from './css/AnotherCard.module.css';
-const AnotherCard = ({id, img, title, star, reviews, prevPrice, newPrice }) => {
+const AnotherCard = ({img, title, star, reviews, prevPrice, newPrice }) => {
   return (
     <>
       <section className={styles.card}>

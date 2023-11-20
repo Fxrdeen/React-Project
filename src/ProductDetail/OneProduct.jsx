@@ -2,6 +2,7 @@ import React from 'react'
 import data from '../db/data'
 import { useParams } from 'react-router-dom'
 import AnotherCard from '../components/AnotherCard'
+import axios from 'axios'
 import './OneProduct.css'
 export const OneProduct = () => {
     const {id} = useParams();
@@ -12,7 +13,7 @@ export const OneProduct = () => {
         <h1>Product: {objId}</h1>
         <AnotherCard
           id = {selectedObj.id}
-          key={selectedObj.id}
+          key = {selectedObj.id}
           img={selectedObj.img}
           title={selectedObj.title}
           star={selectedObj.star}
@@ -20,7 +21,6 @@ export const OneProduct = () => {
           prevPrice={selectedObj.prevPrice}
           newPrice={selectedObj.newPrice}
         />
-        <h1>Deployed this lol</h1>
     </div>
   )
 }
