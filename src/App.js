@@ -90,9 +90,6 @@ function App() {
     <> 
     <Routes>
       <Route path="/" element={
-        <Navbarhi/>
-      } />
-      <Route path="/product" element={
         <>
         <Navbarhi/>
         <Sidebar handleChange={handleChange} />
