@@ -91,7 +91,7 @@ function App() {
     <Routes>
       <Route path="/" element={
         <>
-        <Navbarhi/>
+        {/* <Navbarhi/> */}
         <Sidebar handleChange={handleChange} />
         <Nav query={query} handleInputChange={handleInputChange} />
         <Recommended handleClick={handleClick} />
