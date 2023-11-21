@@ -17,7 +17,7 @@ function Register() {
       const formData = {
         title:productName, prevPrice:priceStart, newPrice:priceEnd, company:productType, category:productType, img:imageFile, id: toString(products.length+1), color:"white", reviews:"123 (reviews)",
       }
-      await axios.post('http://localhost:5001/api/saveFormData', formData)
+      await axios.post('https://backend-shopro.onrender.com/api/saveFormData', formData)
       setProductName('');
       setPriceStart('');
       setPriceEnd('');
