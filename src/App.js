@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/products');
+        const response = await axios.get('https://backend-shopro.onrender.com/api/products');
         const mongodbData = response.data;
         // Combine MongoDB data with the existing products array
         setProducts((prevProducts) => [...prevProducts, ...mongodbData]);
